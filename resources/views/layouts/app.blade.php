@@ -37,18 +37,26 @@
     </ul>
 
     <ul class="hidden lg:flex items-center flex-col lg:flex-row" id="loginMenu">
+        @auth
         <li>
             <a href="" class="p-3 text-xl lg:text-l">Elvis Durmishi</a>
         </li>
         <li>
+            <form action="{{ route('logout') }}" method="post" class="inline">
+                @csrf
+                <button type="submit" class="text-xl lg:text-l">Logout</button>
+            </form>
+        </li>
+        @endauth
+
+        @guest
+        <li>
             <a href="" class="p-3 text-xl lg:text-l">Login</a>
         </li>
         <li>
-            <a href="" class="p-3 text-xl lg:text-l">Register</a>
+            <a href="{{ route('register')}}" class="p-3 text-xl lg:text-l">Register</a>
         </li>
-        <li>
-            <a href="" class="p-3 text-xl lg:text-l">Logout</a>
-        </li>
+        @endguest
     </ul>
 </nav>
     @yield('content')
