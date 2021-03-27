@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\Functions\AssignmentsController;
 use App\Http\Controllers\Student\LoginController;
 use App\Http\Controllers\Student\LogoutController;
 use App\Http\Controllers\Student\RegisterController;
@@ -21,6 +22,4 @@ Route::get("/register", [RegisterController::class, 'index'])->name("register");
 Route::post("/register", [RegisterController::class, 'store']);
 
 
-Route::get('/assignments', function () {
-    return view('assignments.index');
-});
+Route::get("/assignments", [AssignmentsController::class, 'index'])->name('assignments');
