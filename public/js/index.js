@@ -10,18 +10,31 @@ hamburger.addEventListener("click", function () {
 ////////////////// Assignments Buttons/////////////////
 
 ////////////////// Mobile Part ///////////////////////
-let assignmentButton = document.getElementById("assignment-btn");
+let createMobileBtn = document.getElementById("create-mobile-btn");
 let assignmentForm = document.getElementById("assignment-form");
+let classForm = document.getElementById("class-form");
 var icon = document.getElementById("icon");
 let assignment = document.getElementById("assignments");
+let classes = document.getElementById("classes");
 
-assignmentButton.addEventListener("click", function () {
-    $("#assignment-btn svg").toggleClass("fa-feather-alt fa-arrow-left");
-    assignmentForm.classList.toggle("active-assignment-form");
-    assignments.classList.toggle("hidden");
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
+if (createMobileBtn) {
+    createMobileBtn.addEventListener("click", function () {
+        if (assignmentForm) {
+            $("#create-mobile-btn svg").toggleClass(
+                "fa-feather-alt fa-arrow-left"
+            );
+            assignmentForm.classList.toggle("active-form");
+            assignments.classList.toggle("hidden");
+        } else if (classForm) {
+            $("#create-mobile-btn svg").toggleClass("fa-plus fa-arrow-left");
+            classForm.classList.toggle("active-form");
+            classes.classList.toggle("hidden");
+        }
+
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+}
 ///////////////// End of Mobile Part /////////////////
 
 ///////////////// Big Screen Part ////////////////////
@@ -29,11 +42,15 @@ assignmentButton.addEventListener("click", function () {
 let bigAssignmentBtn = document.getElementById("create-btn");
 
 bigAssignmentBtn.addEventListener("click", function () {
-    assignmentForm.classList.toggle("hidden");
-    if (bigAssignmentBtn.innerText === "Create Assignment") {
+    if (assignmentForm) {
+        assignmentForm.classList.toggle("hidden");
+    } else if (classForm) {
+        classForm.classList.toggle("hidden");
+    }
+    if (bigAssignmentBtn.innerText === "Create") {
         bigAssignmentBtn.innerText = "Close";
     } else if (bigAssignmentBtn.innerText === "Close") {
-        bigAssignmentBtn.innerText = "Create Assignment";
+        bigAssignmentBtn.innerText = "Create";
     }
 });
 

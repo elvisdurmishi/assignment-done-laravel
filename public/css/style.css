@@ -2,8 +2,7 @@
     display: flex;
 }
 
-.active-assignment-form {
-    height: 100vh;
+.active-form {
     width: 100%;
     position: absolute;
     top: 0;

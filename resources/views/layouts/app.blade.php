@@ -17,7 +17,7 @@
             <a href="" class="p-3 text-xl lg:text-l">Assignment <span class="text-red-500">Done!</span></a>
         </li>
         <li>
-        <p id="hamburgerbtn" class="p-2 px-3 border-2 border-black rounded lg:hidden bg-grey-800">
+        <p id="hamburgerbtn" class="p-2 px-3 border-2 border-gray-300 rounded lg:hidden bg-grey-800">
             <i class="fas fa-bars"></i>
         </p>
         </li>
