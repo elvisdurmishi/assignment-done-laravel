@@ -13,7 +13,7 @@
                 </button>
                 <form id="class-form" class="hidden" action="{{route('classes')}}" method="post">
                     @csrf
-                    <div class="mb-4 lg:px-80">
+                    <div class="mb-4 lg:px-64">
                         <div class="mb-4">
                         <label for="name" class="sr-only">Class Name</label>
                         <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg

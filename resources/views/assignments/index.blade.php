@@ -13,7 +13,7 @@
                 </button>
                 <form id="assignment-form" class="hidden" action="{{route('assignments')}}" method="post">
                     @csrf
-                    <div class="mb-4 lg:px-64">
+                    <div class="mb-4 lg:px-52">
                         <label for="title" class="sr-only">Title</label>
                         <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg mb-4
                         @error('title') border-red-500 @enderror" name="title" id="title" placeholder="Title">
