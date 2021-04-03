@@ -17,7 +17,7 @@
                         <div class="mb-4">
                         <label for="name" class="sr-only">Class Name</label>
                         <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg
-                        @error('name') border-red-500 @enderror" name="title" id="title" placeholder="Class Name">
+                        @error('name') border-red-500 @enderror" name="name" id="title" placeholder="Class Name">
 
                         @error('name')
                             <div class="text-red-500 text-sm">
@@ -28,7 +28,7 @@
 
                         <div class="mb-4">
                         <label for="section" class="sr-only">Class Section</label>
-                        <input type="section" class="bg-gray-100 border-2 w-full p-4 rounded-lg
+                        <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg
                         @error('section') border-red-500 @enderror" name="section" id="title" placeholder="Class Section (Semester)">
 
                         @error('section')
@@ -40,8 +40,8 @@
 
                         <div class="mb-4">
                         <label for="subject" class="sr-only">Class Subject</label>
-                        <input type="subject" class="bg-gray-100 border-2 w-full p-4 rounded-lg
-                        @error('subject') border-red-500 @enderror" name="section" id="title" placeholder="Class Subject">
+                        <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg
+                        @error('subject') border-red-500 @enderror" name="subject" id="title" placeholder="Class Subject">
 
                         @error('subject')
                             <div class="text-red-500 text-sm">

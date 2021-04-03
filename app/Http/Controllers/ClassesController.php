@@ -16,5 +16,13 @@ class ClassesController extends Controller
             'section' => 'required',
             'subject' => 'required',
         ]);
+
+        $request->user()->classes()->create([
+            'name' => $request->name,
+            'section' => $request->section,
+            'subject' => $request->subject
+        ]);
+
+        return back();
     }
 }
