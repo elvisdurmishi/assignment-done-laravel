@@ -2,10 +2,14 @@ let hamburger = document.getElementById("hamburgerbtn");
 
 let mobileMenu = document.getElementById("mobileMenu");
 let loginMenu = document.getElementById("loginMenu");
-hamburger.addEventListener("click", function () {
+
+function activateHamburger() {
     mobileMenu.classList.toggle("active");
     loginMenu.classList.toggle("active");
-});
+}
+
+hamburger.addEventListener("click", activateHamburger);
+hamburger.addEventListener("touchstart", activateHamburger);
 
 ////////////////// Assignments Buttons/////////////////
 

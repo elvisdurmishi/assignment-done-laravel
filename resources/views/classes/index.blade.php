@@ -14,35 +14,41 @@
                 <form id="class-form" class="hidden" action="{{route('classes')}}" method="post">
                     @csrf
                     <div class="mb-4 lg:px-80">
+                        <div class="mb-4">
                         <label for="name" class="sr-only">Class Name</label>
-                        <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg mb-4
+                        <input type="text" class="bg-gray-100 border-2 w-full p-4 rounded-lg
                         @error('name') border-red-500 @enderror" name="title" id="title" placeholder="Class Name">
 
                         @error('name')
-                            <div class="text-red-500 mt-2 text-sm">
+                            <div class="text-red-500 text-sm">
                                 {{ $message }}
                             </div>
                         @enderror
+                        </div>
 
+                        <div class="mb-4">
                         <label for="section" class="sr-only">Class Section</label>
-                        <input type="section" class="bg-gray-100 border-2 w-full p-4 rounded-lg mb-4
+                        <input type="section" class="bg-gray-100 border-2 w-full p-4 rounded-lg
                         @error('section') border-red-500 @enderror" name="section" id="title" placeholder="Class Section (Semester)">
 
                         @error('section')
-                            <div class="text-red-500 mt-2 text-sm">
+                            <div class="text-red-500 text-sm">
                                 {{ $message }}
                             </div>
                         @enderror
+                        </div>
 
+                        <div class="mb-4">
                         <label for="subject" class="sr-only">Class Subject</label>
-                        <input type="subject" class="bg-gray-100 border-2 w-full p-4 rounded-lg mb-4
+                        <input type="subject" class="bg-gray-100 border-2 w-full p-4 rounded-lg
                         @error('subject') border-red-500 @enderror" name="section" id="title" placeholder="Class Subject">
 
                         @error('subject')
-                            <div class="text-red-500 mt-2 text-sm">
+                            <div class="text-red-500 text-sm">
                                 {{ $message }}
                             </div>
                         @enderror
+                        </div>
 
                         <button class="bg-blue-500 text-white font-medium w-full rounded text-center mb-4 px-5 py-3" type="submit">Create</button>
                     </div>

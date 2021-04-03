@@ -12,6 +12,7 @@ Route::get('/', function () {
 })->name("home");
 
 Route::get('/classes', [ClassesController::class, 'index'])->name("classes");
+Route::post('/classes', [ClassesController::class, 'store']);
 
 Route::post("/logout", [LogoutController::class, 'store'])->name("logout");
 
