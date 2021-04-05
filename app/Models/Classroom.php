@@ -9,9 +9,10 @@ class Classroom extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
         'name',
         'section',
-        'subject'
+        'subject',
     ];
 }

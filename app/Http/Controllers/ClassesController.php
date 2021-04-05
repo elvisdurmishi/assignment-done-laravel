@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
 class ClassesController extends Controller
@@ -17,10 +18,10 @@ class ClassesController extends Controller
             'subject' => 'required',
         ]);
 
-        $request->user()->classes()->create([
+        Classroom::create([
             'name' => $request->name,
             'section' => $request->section,
-            'subject' => $request->subject
+            'subject' => $request->subject,
         ]);
 
         return back();
