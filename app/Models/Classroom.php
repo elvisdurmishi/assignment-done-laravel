@@ -15,4 +15,9 @@ class Classroom extends Model
         'section',
         'subject',
     ];
+
+    public function users()
+    {
+       return $this->belongsToMany(User::class); 
+    }
 }

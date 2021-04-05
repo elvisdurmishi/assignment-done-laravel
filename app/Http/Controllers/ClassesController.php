@@ -18,12 +18,14 @@ class ClassesController extends Controller
             'subject' => 'required',
         ]);
 
-        Classroom::create([
+        $model = Classroom::create([
             'name' => $request->name,
             'section' => $request->section,
             'subject' => $request->subject,
         ]);
 
+        $model->users()->attach(auth()->user()->id);
+        
         return back();
     }
 }
